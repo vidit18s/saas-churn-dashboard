@@ -1,0 +1,12 @@
+code .gitignore
+```
+
+And make sure it contains this — paste it in and save:
+```
+venv/
+__pycache__/
+*.pyc
+.env
+*.csv
+*.xlsx
+.ipynb_checkpoints/
