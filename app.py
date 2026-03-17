@@ -3,11 +3,15 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 st.set_page_config(page_title="SaaS Revenue & Churn Dashboard", layout="wide")
 
 @st.cache_data
 def load_data():
+    if not os.path.exists('data/customers.csv'):
+        import generate_data
+        generate_data.main()
     df = pd.read_csv('data/customers.csv')
     df['signup_date'] = pd.to_datetime(df['signup_date'])
     df['churn_date'] = pd.to_datetime(df['churn_date'])
@@ -71,7 +75,8 @@ with col2:
     fig2.update_layout(showlegend=False, height=320, margin=dict(t=20,b=20))
     fig2.update_yaxes(ticksuffix="%")
     st.plotly_chart(fig2, use_container_width=True)
-    st.markdown("---")
+
+st.markdown("---")
 col3, col4 = st.columns(2)
 
 with col3:
