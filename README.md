@@ -1,25 +1,32 @@
-# SaaS Revenue & Churn Analytics Dashboard
+# 📊 SaaS Revenue & Churn Analytics Dashboard
 
-An interactive analytics dashboard built to analyse customer churn, ARR movements, and revenue performance across a SaaS business — directly relevant to commercial analytics roles in PE-backed and growth-stage SaaS companies.
-
-Built by **Vidit Malhotra** | MSc Data Science & AI (Distinction), University of Liverpool
-
-🔗 [LinkedIn](https://www.linkedin.com/in/viditmalhotra) | [GitHub](https://github.com/vidit1806)
+An interactive analytics dashboard to analyse customer churn, ARR movements, and revenue performance across a SaaS business — directly relevant to commercial analytics roles in PE-backed and growth-stage SaaS companies.
 
 ---
 
-## What this project demonstrates
+## 📊 Key Metrics Tracked
 
-- End-to-end data pipeline from raw generation to interactive dashboard
-- SaaS commercial metrics: ARR, MRR, churn rate, NPS, LTV, Net Revenue Retention
-- Segment-level analysis (SMB, Mid-Market, Enterprise)
-- Cohort-style retention and churn trend analysis
-- Data validation and quality checks on 500+ customer records
-- Clean, interactive UI with real-time filters
+| Metric | Description |
+|--------|-------------|
+| Total ARR | Annualised recurring revenue across all segments |
+| Churn Rate | Monthly churn by SMB, Mid-Market, Enterprise |
+| NRR | Net Revenue Retention across cohorts |
+| LTV | Average customer lifetime value |
+| NPS vs Churn | Satisfaction score linked to churn risk |
+
+**Realistic SaaS benchmarks used:**
+- SMB churn ~3.2% monthly
+- Mid-Market churn ~1.8% monthly  
+- Enterprise churn ~0.6% monthly
 
 ---
 
-## Tech stack
+## 🛠️ Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
 
 | Tool | Purpose |
 |------|---------|
@@ -27,11 +34,10 @@ Built by **Vidit Malhotra** | MSc Data Science & AI (Distinction), University of
 | Pandas & NumPy | Data cleaning and analysis |
 | Streamlit | Interactive dashboard |
 | Plotly | Charts and visualisations |
-| Git & GitHub | Version control |
 
 ---
 
-## Dashboard features
+## ✨ Dashboard Features
 
 - **Key metrics** — Total ARR, active customers, churn rate, NRR, avg LTV
 - **ARR by segment** — Revenue breakdown across SMB, Mid-Market, Enterprise
@@ -45,39 +51,56 @@ Built by **Vidit Malhotra** | MSc Data Science & AI (Distinction), University of
 
 ---
 
-## How to run locally
+## 🚀 How to Run Locally
+
+**1. Clone the repo**
 ```bash
-git clone https://github.com/vidit1806/saas-churn-dashboard.git
+git clone https://github.com/vidit18s/saas-churn-dashboard.git
 cd saas-churn-dashboard
+```
+
+**2. Create virtual environment**
+```bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # Mac/Linux
+```
+
+**3. Install dependencies**
+```bash
 pip install -r requirements.txt
+```
+
+**4. Generate the data**
+```bash
 python generate_data.py
+```
+
+**5. Run the dashboard**
+```bash
 streamlit run app.py
 ```
 
 ---
 
-## Project structure
+## 📁 Project Structure
 ```
 saas-churn-dashboard/
 │
-├── data/                  # Generated customer dataset (CSV)
-├── notebooks/             # Exploratory analysis (coming soon)
 ├── generate_data.py       # Synthetic SaaS data generator
 ├── app.py                 # Streamlit dashboard
 ├── requirements.txt       # Dependencies
-└── README.md              # This file
+└── README.md
 ```
 
 ---
 
-## Business context
+## 💼 Business Context
 
 This project simulates the kind of commercial data analysis required in SaaS analytics roles — reconciling customer, revenue, and behavioural data to surface actionable insights on churn drivers, revenue health, and segment performance.
 
-The dataset is synthetically generated using realistic SaaS benchmarks:
-- SMB churn ~3.2% monthly
-- Mid-Market churn ~1.8% monthly  
-- Enterprise churn ~0.6% monthly
-- ARR ranges consistent with typical SaaS pricing tiers
+---
+
+*Independent project | Vidit Malhotra*  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/viditmalhotra)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/vidit18s)
