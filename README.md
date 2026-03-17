@@ -1,5 +1,5 @@
 # 📊 SaaS Revenue & Churn Analytics Dashboard
-🚀 **[Live Demo →](YOUR_STREAMLIT_URL)**
+🚀 **[Live Demo →](https://saas-churn-dashboard-demo.streamlit.app/)**
 
 An interactive analytics dashboard to analyse customer churn, ARR movements, and revenue performance across a SaaS business — directly relevant to commercial analytics roles in PE-backed and growth-stage SaaS companies.
 
