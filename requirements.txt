@@ -1,8 +1,7 @@
-
+streamlit>=1.28.0
 pandas
 numpy
-streamlit
 plotly
 scikit-learn
-openpyxl
 faker
+openpyxl
